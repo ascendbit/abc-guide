@@ -1,0 +1,75 @@
+import { Tab, Tabs } from 'nextra-theme-docs'
+
+# Quickstart
+To integrate and launch the loyalty feature on your website or application, follow these three simple steps:
+* Prepare the credential.
+* Follow the authentication flow.
+* Test and troubleshoot.
+
+## Prepare your credentials
+Navigate to the Mini-app Settings page of the ABC Loyalty 3.0 Dashboard. And get the client key and client secret that you will use in the following steps.
+![Dashboard-Settings-MiniApp](/dashboard-settings-miniapp.png)
+
+
+## Follow the authentication flow
+1. Use the client ID and client secret to make a POST request to the ABC Loyalty 3.0 SaaS platform to get a JWT token. 
+
+```sh filename="Request: Get token" {3,4} copy
+curl --location --request POST 'https://abc-auth-dev.abc-dev.network/realms/partner/protocol/openid-connect/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'client_id={your_client_id}' \
+--data-urlencode 'client_secret={your_client_secret}' \
+--data-urlencode 'grant_type=client_credentials'
+```
+
+```sh filename="Response: Get token" {2} copy
+{
+    "access_token": {your_access_token},
+    "expires_in": 1800,
+    "refresh_expires_in": 0,
+    "token_type": "Bearer",
+    "not-before-policy": 0,
+}
+```
+
+2. Use the access token as an authentication bearer for the request to get a one-time token (OTT). 
+
+```sh filename="Request: Get the Mini-app URL" {2,5} copy
+curl --location --request POST 'https://api-dev.abc-dev.network/latitude-configs/v1/api/auth/ott' \
+--header 'Authorization: Bearer {your_access_token}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "userId": {your-customer-identity}
+}'
+```
+
+```sh filename="Response: Get the Mini-app URL" copy
+{
+    "accessToken": "DBAj1PoC6BcJvpLsdxU34C86BVz1xFI=",
+    "redirectUrl": "https://{org-id}.ascendbit.io"
+}
+
+```
+
+3. Use the redirect URL and access token from the previous step to redirect or open the loyalty application with the token. Here is an example code:
+
+```sh /accessToken/ filename="Redirect the user" copy
+https://{mini-app-url}?token=${accessToken}
+```
+
+![MiniApp-Challenge](/miniapp-challenge.png)
+
+
+## Test and troubleshoot 
+When testing the integration or troubleshooting any issues, here are two common problems that you may encounter:
+
+* If you cannot obtain a JWT access token, check your client ID and client secret in the Latitude console. Make sure that these credentials are correct and have been issued correctly.
+
+* Suppose you encounter an Unauthorized page after opening the Loyalty application. In that case, you should verify that you have sent the OTT as a token request parameter in the redirect URL using the correct format: 
+
+```sh /accessToken/ filename="Mini-app URL" {3} copy
+https://{mini-app-url}?token=${accessToken}
+```
+
+By following these steps, you can help ensure your integration runs smoothly and avoid common issues that may arise during testing.
+ 

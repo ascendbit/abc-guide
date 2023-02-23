@@ -1,0 +1,12 @@
+{
+  "index": "Home",
+  "get-started": "Get Started",
+  "webhook": "Event Webhook",
+  "mini-app": "Mini-app",
+  "about": {
+    "title": "About",
+    "type": "page",
+    "href" : "https://ascendbit.com",
+    "newWindow": true
+  }
+}

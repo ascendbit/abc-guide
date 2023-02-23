@@ -1,39 +1,23 @@
-# Full Next.js example
+# Nextra Docs Template 
 
-This is a full-featured boilerplate for a creating a documentation website using Markdoc and Next.js.
+This is a template for creating documentation with [Nextra](https://nextra.site).
 
-<img width="2032" alt="image" src="https://user-images.githubusercontent.com/62121649/174916143-16f18270-0463-402c-8b48-33c627ea7a7e.png">
+[**Live Demo →**](https://nextra-docs-template.vercel.app)
 
-## Setup
+[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
 
-First, clone this repo and install the dependencies required:
+## Quick Start
 
-```bash
-npm install
-# or
-yarn install
-```
+Click the button to clone this repository and deploy it on Vercel:
 
-Then, run the development server:
+[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Local Development
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+First, run `pnpm i` to install the dependencies.
 
-You can start editing the page by modifying `index.md`. The page auto-updates as you edit the file.
+Then, run `pnpm dev` to start the development server and visit localhost:3000.
 
-## Deploy
+## License
 
-The quickest way to deploy your own version of this boilerplate is by deploying it with [Vercel](https://vercel.com) or [Netlify](https://www.netlify.com/) by clicking one of the buttons below.
-
-### Deploy with Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/markdoc/next.js-starter)
-
-### Deploy to Netlify
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/markdoc/next.js-starter)
+This project is licensed under the MIT License.

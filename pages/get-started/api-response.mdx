@@ -1,0 +1,28 @@
+# API Response
+When you make an API request to ABC, the server will respond with a standard HTTP response code to indicate whether the request was successful or not.
+
+If the request was successful, you'll receive a message with a 200 HTTP response code. The message will say "success".
+
+However, if there was an error with your request, you'll receive a response with an error message and a "details" field that says "error". You should check the error message to understand the issue and troubleshoot it accordingly.
+
+```json filename="Example" copy
+{
+  "error": "invalid_input",
+  "details": [
+    "missing_field_event_id"
+  ]
+}
+```
+
+## HTTP status code summary
+| Code  | Description |
+|:---- | :----- |
+| 200 | **OK** - The API request was successful. |
+| 400 | **Bad Request** - The API request was invalid or malformed, likely due to missing a required parameter. |
+| 401 | **Unauthorized** - The API request did not provide a valid API key. |
+| 402 | **Request Failed** - The API request failed, even though the parameters were valid. |
+| 403 | **Forbidden** - The API key provided does not have permission to perform the requested action. |
+| 404 | **Not Found** - The requested resource or endpoint does not exist. |
+| 409 | **Conflict** - The API request conflicts with another request, such as using the same idempotent key. |
+| 429 | **Too Many Requests** - The API request was rate-limited due to too many requests being made too quickly. It is recommended to use exponential backoff for subsequent requests. |
+| 500, 502, 503, 504 | **Server Errors** - Something went wrong on the server side of the ABC API. |

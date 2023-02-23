@@ -1,0 +1,11 @@
+# How the ABC Loyalty 3.0 works
+
+Simply use our APIs and add a bit of code to your app to send us events. Then, you can create tokenized rewards that can be earned, bought, or sold and even tap into other blockchain networks to make your rewards even more valuable. You can even target holders of specific assets to engage them in personalized ways, creating communities and unlocking new revenue streams.
+
+![ABC Loyalty 3.0 Diagram](/abc-loyalty-30-diagram.png)
+
+1. Send your events to our webhook endpoint via HTTP POST requests in JSON format. You can include any relevant data in the event payload.
+2. Our webhook will listen to your events and automatically parse the JSON payload, extracting the relevant data.
+3. We'll then match the events to the appropriate campaigns you've set up in our platform based on the event properties you specified. This allows you to easily segment and target specific customer groups.
+4. Once the event is matched with a campaign, we'll automatically trigger the reward distribution process, which can include airdropping deals or NFTs as rewards to your customers. These rewards are tokenized and can be easily tracked on the blockchain.
+5. Finally, your customers will be able to view all their completed missions and earned rewards in your website or application, which can be integrated with our ready-to-use Mini-App.

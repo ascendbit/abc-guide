@@ -1,0 +1,18 @@
+# How the Event Webhook Works
+
+The ABC Event Webhook is a simple way for developers to send data payloads to the ABC Loyalty 3.0 SaaS server in a specific JSON format called "Event Payload." Here's how it works in a nutshell:
+
+[![](https://mermaid.ink/img/pako:eNp1kEFLAzEQhf9KyLniPWCl2ouIuLgiCIEyJtNu6O4kJhM1lv53026VFXROj3nfG4a3k8ZblEomfM1IBpcONhEGTaJOgMjOuADE4tnnKNqSGP8wF1fXYtHcaBqtCXs2n59MJZr79lGcv-NL5_12hWSDd8SXENxqi-Xio3yO8VNgGn3C6NbloMUtln-xJnqDKYklMIgGSu_B_oYrPflOiQfkHOl4uMX4hrFuUvCUUJOcyQHjAM7WgnaHO1pyhwNqqars3aZjLTXtKwiZfVvISLWGPuFM5mCBv-v82aJ17OPd2Pmx-v0XPs198g?type=png)](https://mermaid.live/edit#pako:eNp1kEFLAzEQhf9KyLniPWCl2ouIuLgiCIEyJtNu6O4kJhM1lv53026VFXROj3nfG4a3k8ZblEomfM1IBpcONhEGTaJOgMjOuADE4tnnKNqSGP8wF1fXYtHcaBqtCXs2n59MJZr79lGcv-NL5_12hWSDd8SXENxqi-Xio3yO8VNgGn3C6NbloMUtln-xJnqDKYklMIgGSu_B_oYrPflOiQfkHOl4uMX4hrFuUvCUUJOcyQHjAM7WgnaHO1pyhwNqqars3aZjLTXtKwiZfVvISLWGPuFM5mCBv-v82aJ17OPd2Pmx-v0XPs198g)
+
+1. **Generate Event Payload:** You need to generate an Event Payload in the specific JSON format provided by the ABC SaaS service. This should contain information about the event being triggered or tracked, a unique identifier for the event, a unique identifier for the user who triggered the event, and other optional information such as location, device, and metrics.
+2. **Send Data Payload:** Once you have generated the Event Payload, you need to send it to the Webhook Endpoint URL provided in the Developer Settings page, along with the API Key for authorization. This can be done using an HTTP POST request.
+3. **Verify API Key:** The SaaS server will verify the API Key for authentication purposes. If the API Key is not valid, the server will return an error response.
+4. **Process Data Payload:** The SaaS server will process the data payload and generate a response based on the success or failure of the data payload. If the payload is successfully processed, the server will return a 200 HTTP response code.
+
+## Getting started
+To get started with using ABC Loyalty 3.0's event tracking API, you can follow these simple steps:
+1. Get the API Key and Webhook Endpoint URL from the Developer Settings page.
+2. Understand the format of the event payloads that need to be sent.
+3. Send the event data to the Webhook Endpoint URL using an HTTP POST request along with the API Key for authentication.
+
+That's it! By following these steps, you can easily integrate with the ABC Event Webhook and start sending data payloads to the SaaS server.
