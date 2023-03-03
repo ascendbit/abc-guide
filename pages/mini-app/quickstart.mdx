@@ -7,9 +7,12 @@ To integrate and launch the loyalty feature on your website or application, foll
 * Test and troubleshoot.
 
 ## Prepare your credentials
-Navigate to the Mini-app Settings page of the ABC Loyalty 3.0 Dashboard. And get the client key and client secret that you will use in the following steps.
+1. Navigate to the Mini-app Settings page of the ABC Loyalty 3.0 Dashboard. 
 ![Dashboard-Settings-MiniApp](/dashboard-settings-miniapp.png)
-
+2. Click the "Edit" link to set your authentication URL.
+![Dashboard-Settings-MiniApp](/dashboard-settings-miniapp-credentials-edit.png)
+3. Get the client key and client secret that you will use in the following steps.
+![Dashboard-Settings-MiniApp](/dashboard-settings-miniapp-credentials.png)
 
 ## Follow the authentication flow
 1. Use the client ID and client secret to make a POST request to the ABC Loyalty 3.0 SaaS platform to get a JWT token. 
@@ -63,9 +66,15 @@ https://{mini-app-url}?token=${accessToken}
 ## Test and troubleshoot 
 When testing the integration or troubleshooting any issues, here are two common problems that you may encounter:
 
-* If you cannot obtain a JWT access token, check your client ID and client secret in the Latitude console. Make sure that these credentials are correct and have been issued correctly.
 
-* Suppose you encounter an Unauthorized page after opening the Loyalty application. In that case, you should verify that you have sent the OTT as a token request parameter in the redirect URL using the correct format: 
+#### Q: What should I do if I cannot obtain a JWT access token?
+A: If you cannot obtain a JWT access token, please check your *client ID* and *client secret* in the Dashboard. Ensure that these credentials are correct and have been issued correctly.
+
+#### Q: What should I do if I encounter a network error?
+A: If you have a network error, please check your *authentication URL* in the Mini-app settings page.
+
+#### Q: What should I do if I encounter an Unauthorized page after opening the Mini-app?
+A: If you encounter an Unauthorized page after opening the Mini-app, please verify that you have sent the OTT as a token request parameter in the redirect URL using the correct format.
 
 ```sh /accessToken/ filename="Mini-app URL" {3} copy
 https://{mini-app-url}?token=${accessToken}
