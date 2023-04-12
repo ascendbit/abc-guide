@@ -1,0 +1,38 @@
+# JWT Auth
+
+JWT Auth is a good choice for flexible and scalable authentication that supports token-based authentication, user information sharing, and features such as token expiration, revocation, and refresh.
+
+[![](https://mermaid.ink/img/pako:eNptkk1rwzAMhv-K8GljbWAf3cGHQrpeNigb6z4Y5CIStTUkjqfYg6z0v09ulq1fB4ORXr2PJWut8rogpVVDn4FsTlODS8YqswAO2ZvcOLQeXhviw9hHHRhS507G58RfxyXp5A5mxpohHpfFXPp0H8PxROJwPO4hGi4TeHRkwa9oz6NX9OKOrOEqgTSI2AoBPf1Ju_ye9XUCz-QDW3h4fznw3H2yhpuoLAxT7sHXe_3ABUyQDTGcict5tNlN_1pJhxpGCbwRm0UbeTA3S4tCJ-hrRHREHnXt1Gy-qQC0BXD35AI9noD9d3ebwNQ0rsQWJKUGqiKu0BTy6-vttJVMqaJMabmWZrnymcrsRoQYfD1vba6050ADFZzA-hVReoFlI1GZh6951u3Rdp02PwaZxWw?type=png)](https://mermaid.live/edit#pako:eNptkk1rwzAMhv-K8GljbWAf3cGHQrpeNigb6z4Y5CIStTUkjqfYg6z0v09ulq1fB4ORXr2PJWut8rogpVVDn4FsTlODS8YqswAO2ZvcOLQeXhviw9hHHRhS507G58RfxyXp5A5mxpohHpfFXPp0H8PxROJwPO4hGi4TeHRkwa9oz6NX9OKOrOEqgTSI2AoBPf1Ju_ye9XUCz-QDW3h4fznw3H2yhpuoLAxT7sHXe_3ABUyQDTGcict5tNlN_1pJhxpGCbwRm0UbeTA3S4tCJ-hrRHREHnXt1Gy-qQC0BXD35AI9noD9d3ebwNQ0rsQWJKUGqiKu0BTy6-vttJVMqaJMabmWZrnymcrsRoQYfD1vba6050ADFZzA-hVReoFlI1GZh6951u3Rdp02PwaZxWw)
+
+
+## When to use the JWT Auth
+* Use JWT Auth if you need a flexible and scalable authentication system that supports token-based authentication.
+* JWT Auth allows you to pass user information between different services or systems.
+* If you have an existing infrastructure that supports JWT authentication, JWT Auth might be the better choice.
+* JWT Auth supports token expiration, revocation, and refresh, so it's a good choice if you need those features.
+
+
+## Getting Started with JWT Auth
+To get started with JWT Auth, follow these steps:
+
+1. Set up your client credentials
+Navigate to the Mini-app Settings page of the ABC Loyalty 3.0 Dashboard and select "JWT Auth" as your authentication method. 
+![Dashboard-Settings-MiniApp](/dashboard-miniapp.png)
+
+
+Then, set your client id, KID, and JWK URL. This will generate a secret that you'll need to use to sign your tokens.
+![Dashboard-Settings-MiniApp](/dashboard-miniapp-auth-jwt.png)
+
+
+2. Obtain your Access URL
+Copy the Access URL from the Mini-app Settings page. You'll need to use this URL to open your mini-app.
+![Dashboard-Settings-MiniApp](/dashboard-miniapp-url.png)
+
+
+3. Configure your application
+Configure your application to use the Access URL you obtained in the previous step. This may involve updating a configuration file, environment variable, or other settings.
+
+4. Pass your JWT token in the Authorization header
+When you try to open the Access URL in your application, pass your JWT token in the Authorization header. The token should be signed using the secret generated in step 1. This will authenticate your request and allow you to access the mini-app.
+
+That's it! You're now ready to use JWT Auth to authenticate requests to your mini-app.

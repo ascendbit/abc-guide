@@ -1,6 +1,6 @@
 {
   "overview": "Overview",
-  "how-it-works": "How it works",
-  "quickstart": "Quickstart",
+  "auth-abc": "ABC Auth",
+  "auth-jwt": "JWT Auth",
   "customization": "Customize the Mini-app"
 }

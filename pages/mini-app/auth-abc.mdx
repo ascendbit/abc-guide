@@ -1,20 +1,35 @@
 import { Tab, Tabs } from 'nextra-theme-docs'
 
-# Quickstart
+# ABC Auth
+This is a tutorial on ABC Auth authentication. It covers usage cases, integration into applications, testing, and troubleshooting. It contains code snippets for making API requests to ABC Loyalty 3.0 and obtaining authentication tokens, as well as a flowchart demonstrating the authentication process.
+
+[![](https://mermaid.ink/img/pako:eNp9Uk1rAjEQ_StDDj3pQj8POQjWQmmpWJQeCnsJm1GHupNtdmKx4n_vrF3Kam0PgZD33rx5k9maIng01tT4npALvCO3iK7MGaByUaigyrHAa0gRRitClpPQDOMa4zE0vB3B8Pnh1POYmPquqhqsOR2D_mDQqWnhPINJhQyyxANZh6SS1svCRQb3KDBh7AuVCBLekBt-yzguf5nBFCVFPiH5w-Iqg8dUC9TIHlKNkTyEOWwadqFAKDFqEXBJe2bN7QT_6eA6g6EyQ6RP9HAG8budbl54mT79HlN3kBZushaBRhCakf3I1-TasurQLQofJMu91WF60zMaonTkdTm2-18yyioxN1avK1osJTc575SoMcNsw4WxEhP2TKq8Bm43ydi5W9X6ip4kxPH3uu23bvcFgdzXJQ?type=png)](https://mermaid.live/edit#pako:eNp9Uk1rAjEQ_StDDj3pQj8POQjWQmmpWJQeCnsJm1GHupNtdmKx4n_vrF3Kam0PgZD33rx5k9maIng01tT4npALvCO3iK7MGaByUaigyrHAa0gRRitClpPQDOMa4zE0vB3B8Pnh1POYmPquqhqsOR2D_mDQqWnhPINJhQyyxANZh6SS1svCRQb3KDBh7AuVCBLekBt-yzguf5nBFCVFPiH5w-Iqg8dUC9TIHlKNkTyEOWwadqFAKDFqEXBJe2bN7QT_6eA6g6EyQ6RP9HAG8budbl54mT79HlN3kBZushaBRhCakf3I1-TasurQLQofJMu91WF60zMaonTkdTm2-18yyioxN1avK1osJTc575SoMcNsw4WxEhP2TKq8Bm43ydi5W9X6ip4kxPH3uu23bvcFgdzXJQ)
+
+
+## When to use the ABC Auth
+* Use ABC Auth if you want a simple and secure authentication system that's easy to set up and manage.
+* ABC Auth doesn't support token expiration or revocation, so it's best for cases where you don't need those features.
+* If you don't have an existing infrastructure that supports JWT authentication, ABC Auth might be the better choice.
+
+
+## Getting Started with ABC Auth
 To integrate and launch the loyalty feature on your website or application, follow these three simple steps:
 * Prepare the credential.
 * Follow the authentication flow.
 * Test and troubleshoot.
 
-## Prepare your credentials
-1. Navigate to the Mini-app Settings page of the ABC Loyalty 3.0 Dashboard. 
-![Dashboard-Settings-MiniApp](/dashboard-settings-miniapp.png)
-2. Click the "Edit" link to set your authentication URL.
-![Dashboard-Settings-MiniApp](/dashboard-settings-miniapp-credentials-edit.png)
-3. Get the client key and client secret that you will use in the following steps.
-![Dashboard-Settings-MiniApp](/dashboard-settings-miniapp-credentials.png)
 
-## Follow the authentication flow
+### Prepare your credentials
+1. Navigate to the ***Mini-app Settings*** page of the ABC Loyalty 3.0 Dashboard to set your authentication method. 
+![Dashboard-Settings-MiniApp](/dashboard-miniapp.png)
+
+2. Select "ABC Auth" and set your authentication URL.
+![Dashboard-Settings-MiniApp](/dashboard-miniapp-auth-abc.png)
+
+3. Get the client key and client secret that you will use in the following steps.
+![Dashboard-Settings-MiniApp](/dashboard-miniapp-auth-abc-credentials.png)
+
+### Follow the authentication flow
 1. Use the client ID and client secret to make a POST request to the ABC Loyalty 3.0 SaaS platform to get a JWT token. 
 
 ```sh filename="Request: Get token" {3,4} copy
@@ -63,7 +78,7 @@ https://{mini-app-url}?token=${accessToken}
 ![MiniApp-Challenge](/miniapp-challenge.png)
 
 
-## Test and troubleshoot 
+### Test and troubleshoot 
 When testing the integration or troubleshooting any issues, here are two common problems that you may encounter:
 
 
@@ -80,5 +95,4 @@ A: If you encounter an Unauthorized page after opening the Mini-app, please veri
 https://{mini-app-url}?token=${accessToken}
 ```
 
-By following these steps, you can help ensure your integration runs smoothly and avoid common issues that may arise during testing.
- 
+By following these steps, you can help ensure your integration runs smoothly and avoid common issues that may arise during testing. 
