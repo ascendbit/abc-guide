@@ -55,7 +55,7 @@ To send an Event Payload to the webhook endpoint, developers can use the followi
 ```sh filename="Send Payload" copy
 curl -X POST \
   https://event.latitude.app/orgs/{org-id}/events \
-  -H 'Authorization: Bearer {api-key}' \
+  -H 'X-API-KEY: {api-key}' \
   -H 'Content-Type: application/json' \
   -d '[
         {
@@ -76,7 +76,7 @@ curl -X POST \
       ]'
 ```
 
-In this example, the API key and webhook endpoint URL are included in the Authorization header. The event payload is included in the request body as a JSON array.
+In this example, the API key is included in the Authorization header. The event payload is included in the request body as a JSON array.
 
 ## Check your event
 To check your event, simply search for it in the condition settings page of your campaign using the Dashboard.
