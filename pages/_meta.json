@@ -3,6 +3,7 @@
   "get-started": "Get Started",
   "webhook": "Event Webhook",
   "mini-app": "Mini-app",
+  "data-publishers": "Data Publishers",
   "about": {
     "title": "About",
     "type": "page",
