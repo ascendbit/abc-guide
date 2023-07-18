@@ -1,0 +1,69 @@
+import { Steps } from 'nextra-theme-docs'
+
+# Mixpanel
+
+Mixpanel is a powerful analytics platform that helps you track and analyze user behavior in your application or website. By integrating with Mixpanel, you can gain valuable insights into user engagement, retention, and conversion rates. This section of the developer guide provides step-by-step instructions on setting up the integration, selecting events to be sent to Mixpanel, and managing the streaming process.
+
+Follow these simple steps:
+1. Setup
+2. Select events
+3. Start streaming
+
+## Setup
+
+To set up the integration with Mixpanel, follow these steps:
+
+<Steps>
+### Open the Data Publisher menu
+Open the menu [Developer > Data Publishers](https://dashboard.ascendbit.com/developers/datapublishers) in our system and click the **"Connect"** button.
+![Data Publisher](/dashboard-publisher.png)
+
+### Enter your project token.
+![Mixpanel Settings](/dashboard-publisher-mixpanel.png)
+
+
+You can get the *Project Token* by open your Mixpanel UI. 
+![Mixpanel Menu](/publisher-mixpanel-menu.png)
+
+You can find it by navigating to Choose your project > Project Settings > Project Token. It is a unique identifier for your project and allows us to establish a connection with Mixpanel.
+![Mixpanel Project Token](/publisher-mixpanel-projectoken.png)
+
+
+### Save info
+Click the "Save" button. 
+
+</Steps>
+
+By following these steps, you will successfully configure the integration with Mixpanel by entering the project token associated with your project.
+
+
+## Select Events
+![Mixpanel Events](/dashboard-publisher-mixpanel-events.png)
+
+To choose which events you want to send to Mixpanel, follow these steps:
+
+1. Navigate to the **"Events"** Tab.
+
+2. Choose the events that you wish to send to Mixpanel. Select the events based on your business objectives and the insights you want to gain.
+
+## Start/Pause Streaming
+![Mixpanel Events](/dashboard-publisher-mixpanel-start.png)
+
+To control the streaming of events to Mixpanel, follow these steps:
+
+1. Go to the Data Publisher List
+
+2. **Start Streaming:** Click the appropriate button to start the streaming process. This will begin sending the selected events to Mixpanel.
+
+3. **Pause Streaming:** If needed, you can pause the streaming by clicking the corresponding button. When you pause the streaming, we will stop sending events to Mixpanel. You can restart the streaming at any time. Please note that only new events will be sent after resuming the streaming; previously sent events will not be sent again.
+
+By following these steps, you can successfully set up the integration with Mixpanel, select events, and control the streaming process according to your preferences.
+
+## Mixpanel Event Example
+These screenshots show how events sent from our system will appear in Mixpanel, providing insight into the structure and layout of captured data. Keep in mind that actual event data can vary based on specific events you set up.
+
+### Event
+![Mixpanel Event](/publisher-mixpanel-event.png)
+
+### User Properties
+![Mixpanel Event](/publisher-mixpanel-userprop.png)

@@ -28,19 +28,133 @@ When a user opens your mini-app for the first time, a wallet address will be aut
 N/A
 
 
-## Campaign
+## Progressed
 
+### ABC Mission Progressed
+When there is advancement in mission progress. Track user journey and progress towards completing missions for personalized experiences.
+
+**Extra Fields:**
+| Field | Description |
+| :----- | :----- |
+|challengeId|Unique identifier for the challenge in the system.|
+|challengeNameTH|The name of the challenge in Thai language.|
+|challengeNameEN|The name of the challenge in English language.|
+|challengeStartTime|The start time of the challenge.|
+|challengeEndTime|The end time of the challenge.|
+|missionId|Unique identifier for the mission within the challenge.|
+|missionNameTH|The name of the mission in Thai language.|
+|missionNameEN|The name of the mission in English language.|
+|missionPeriodType|The type of period for the mission (possible values: Day, Week, Month, Campaign Duration).|
+|missionPeriod|The specific frequency period for the mission (e.g., Day 1, Week 2, Month 1).|
+|missionPeriodProgress|The progress made in the mission period.|
+|missionPeriodGoal|The goal to be achieved in the mission period.|
+|deepLink|A link or URL that provides a direct access to specific challenge.|
+
+
+**User Properties for Mixpanel:**
+| Field | Description |
+| :----- | :----- |
+|abc_firstMissionProgressed|The first date that this user had a mission progress.|
+|abc_lastMissionProgressed|The most recent date that this user had a mission progress.|
+|abc_totalMissionProgressed|The total number of mission progress events recorded for this user.|
+
+
+## Completed
 ### ABC Mission Completed
-Stay tuned for updates!
+When a user successfully completes a mission, the "Mission Completed" event is triggered. Use this event to track progress, reward users, or trigger follow-up actions based on mission completion.
 
 **Extra Fields:**
 | Field | Description |
 | :----- | :----- |
+|challengeId|Unique identifier for the challenge in the system.|
+|challengeNameTH|The name of the challenge in Thai language.|
+|challengeNameEN|The name of the challenge in English language.|
+|challengeStartTime|The start time of the challenge.|
+|challengeEndTime|The end time of the challenge.|
+|missionId|Unique identifier for the mission within the challenge.|
+|missionNameTH|The name of the mission in Thai language.|
+|missionNameEN|The name of the mission in English language.|
+|missionPeriodType|The type of period for the mission (possible values: Day, Week, Month, Campaign Duration).|
+|missionPeriod|The specific frequency period for the mission (e.g., Day 1, Week 2, Month 1).|
+|missionPeriodProgress|The progress made in the mission period.|
+|missionPeriodGoal|The goal to be achieved in the mission period.|
+|hasReward|A boolean value indicating if there is a reward associated with the mission completion.|
+|rewardID|The unique identifier for the reward.|
+|tokenID|The identifier for the token associated with the reward.|
+|rewardAddress|The address (e.g., 0x818282010) where the reward is stored.|
+|rewardStandard|The standard (e.g., ERC721/ERC1155) of the reward.|
+|rewardNameTH|The name of the reward in Thai language.|
+|rewardNameEN|The name of the reward in English language.|
+|rewardType|The type of reward (possible values: Badge, NFT, Voucher).|
+|rewardRarity|The rarity level or category of the reward.|
+|rewardQuantity|The quantity of the reward earned or received.|
+|deepLink|A link or URL that provides a direct access to specific challenge.|
 
-## Deal
-### ABC Deal Redeemed
-Stay tuned for updates!
+**User Properties for Mixpanel:**
+| Field | Description |
+| :----- | :----- |
+|abc_firstMissionCompleted|The first date that this user had a mission completed.|
+|abc_lastMissionCompleted|The most recent date that this user had a mission completed.|
+|abc_totalMissionCompleted|The total number of mission completed events recorded for this user.|
+
+### ABC Challenge Completed
+When a user successfully completes a challenge, the "Challenge Completed" event is triggered. This event signifies the achievement of completing a specific challenge and can be utilized to track user progress, provide rewards, or initiate further actions based on challenge completion.
 
 **Extra Fields:**
 | Field | Description |
 | :----- | :----- |
+|challengeId|Unique identifier for the challenge in the system.|
+|challengeNameTH|The name of the challenge in Thai language.|
+|challengeNameEN|The name of the challenge in English language.|
+|challengeStartTime|The start time of the challenge.|
+|challengeEndTime|The end time of the challenge.|
+|hasReward|A boolean value indicating if there is a reward associated with the challenge completion.|
+|rewardID|The unique identifier for the reward.|
+|tokenID|The identifier for the token associated with the reward.|
+|rewardAddress|The address (e.g., 0x818282010) where the reward is stored.|
+|rewardStandard|The standard (e.g., ERC721/ERC1155) of the reward.|
+|rewardNameTH|The name of the reward in Thai language.|
+|rewardNameEN|The name of the reward in English language.|
+|rewardType|The type of reward (possible values: Badge, NFT, Voucher).|
+|rewardRarity|The rarity level or category of the reward.|
+|rewardQuantity|The quantity of the reward earned or received.|
+|deepLink|A link or URL that provides a direct access to specific challenge.|
+
+**User Properties for Mixpanel:**
+| Field | Description |
+| :----- | :----- |
+|abc_firstchallengeCompleted|The first date that this user had a challenge completed.|
+|abc_lastchallengeCompleted|The most recent date that this user had a challenge completed.|
+|abc_totalchallengeCompleted|The total number of challenge completed events recorded for this user.|
+
+## Received
+### ABC Reward Received
+When a user receives a reward after complete the mission or challenge, the "Reward Received" event is triggered. This event signifies the successful delivery of a reward to the user and can be used to track reward distribution, provide acknowledgments, or update user records based on the received reward.
+
+**Extra Fields:**
+| Field | Description |
+| :----- | :----- |
+|walletAddress|The user's wallet address where the reward has been sent.|
+|rewardTransferTxId|The transaction ID associated with the reward transfer.|
+|isMissionReward|A boolean value indicating whether the reward is specifically related to a mission (true or false).|
+|challengeId|Unique identifier for the challenge in the system.|
+|challengeNameEN|The name of the challenge in English language.|
+|challengeStartTime|The start time of the challenge.|
+|challengeEndTime|The end time of the challenge.|
+|missionId|Unique identifier for the mission within the challenge.|
+|missionNameEN|The name of the mission in English language.|
+|rewardID|The unique identifier for the reward.|
+|tokenID|The identifier for the token associated with the reward.|
+|rewardAddress|The address (e.g., 0x818282010) where the reward is stored.|
+|rewardStandard|The standard (e.g., ERC721/ERC1155) of the reward.|
+|rewardNameEN|The name of the reward in English language.|
+|rewardType|The type of reward (possible values: Badge, NFT, Voucher).|
+|rewardRarity|The rarity level or category of the reward.|
+|rewardQuantity|The quantity of the reward earned or received.|
+
+**User Properties for Mixpanel:**
+| Field | Description |
+| :----- | :----- |
+|abc_firstRewardReceived|The first date that this user had a reward received.|
+|abc_lastRewardReceived|The most recent date that this user had a reward received.|
+|abc_totalRewardReceived|The total number of reward received events recorded for this user.|

@@ -1,0 +1,70 @@
+import { Steps } from 'nextra-theme-docs'
+
+# Braze
+
+Braze is a comprehensive customer engagement platform that allows you to deliver personalized and targeted experiences to your users. By integrating with Braze, you can leverage powerful marketing automation, user segmentation, and campaign management features. This section of the developer guide provides step-by-step instructions on setting up the integration, selecting events to be sent to Braze, and managing the streaming process.
+
+Follow these simple steps:
+1. Setup
+2. Select events
+3. Start streaming
+
+## Setup
+
+To set up the integration with Braze, follow these steps:
+
+<Steps>
+### Open the Data Publisher menu
+Open the menu [Developer > Data Publishers](https://dashboard.ascendbit.com/developers/datapublishers) in our system and click the **"Connect"** button.
+![Data Publisher](/dashboard-publisher.png)
+
+### Enter the API Key, App ID and REST Endpoint.
+![Braze Settings](/dashboard-publisher-braze.png)
+
+
+#### API Key
+An *API Key* generated in the Braze UI, navigate to: **Settings > API Keys > Create New API Key**.
+![Braze Menu](/publisher-braze-menu.png)
+![Braze API Key](/publisher-braze-apikey.png)
+
+#### App ID
+The *App ID* used to reference specific Apps in requests made to the Braze API. Found in the Braze UI under: **Settings > API Keys > Identification**. 
+![Braze App ID](/publisher-braze-appid.png)
+
+#### REST Endpoint
+You can find your *REST Endpoint* from [here](https://www.braze.com/docs/api/basics#endpoints). 
+![Braze REST Endpoint](/publisher-braze-restendpoint.png)
+
+### Save info
+Click the "Save" button. 
+
+</Steps>
+
+By following these steps, you will successfully configure the integration with Braze by entering the project token associated with your project.
+
+
+## Select Events
+![Braze Events](/dashboard-publisher-braze-events.png)
+
+To choose which events you want to send to Braze, follow these steps:
+
+1. Navigate to the **"Events"** Tab.
+
+2. Choose the events that you wish to send to Braze. Select the events based on your business objectives and the insights you want to gain.
+
+## Start/Pause Streaming
+![Braze Events](/dashboard-publisher-braze-start.png)
+
+To control the streaming of events to Braze, follow these steps:
+
+1. Go to the Data Publisher List
+
+2. **Start Streaming:** Click the appropriate button to start the streaming process. This will begin sending the selected events to Braze.
+
+3. **Pause Streaming:** If needed, you can pause the streaming by clicking the corresponding button. When you pause the streaming, we will stop sending events to Braze. You can restart the streaming at any time. Please note that only new events will be sent after resuming the streaming; previously sent events will not be sent again.
+
+By following these steps, you can successfully set up the integration with Braze, select events, and control the streaming process according to your preferences.
+
+## Braze Event Example
+This screenshot shows how events sent from our system will appear in Braze, providing insight into the structure and layout of captured data. Keep in mind that actual event data can vary based on specific events you set up.
+![Braze Event](/publisher-braze-event.png)

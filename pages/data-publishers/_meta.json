@@ -2,5 +2,7 @@
   "overview": "Overview",
   "how-it-works": "How it works",
   "ga4": "Google Analytics 4",
+  "mixpanel": "Mixpanel",
+  "braze": "Braze",
   "events": "Events"
 }
